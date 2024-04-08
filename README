@@ -1,0 +1,10 @@
+# Reproducer
+
+## Start
+1. run `make up`
+2. open site in browser
+3. click 'view group'
+  - read
+4. click 'Edit group'
+  - failure
+5. inspect code

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('app_main') }}">Home</a>
+
+    <h1>{{ group.name }}</h1>
+
+    <h3>Notice</h3>
+    <ul>
+        <li><code style="color:darkred">Group->Application->SpecialPerson</code> is a proxy despite being <code style="color:darkred">EAGER</code> loaded</li>
+        <li>The <code>SpecialPerson</code> proxy has unset values for all but ID</li>
+    </ul>
+    {{ dump(group) }}
+
+    <h3>Clicking Edit will fail. This tries to update the SpecialPerson::count to a random value with unset proxy values (e.g. null)</h3>
+    <a href="{{ path('app_edit_group', {id:group.id}) }}">Edit group</a>
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

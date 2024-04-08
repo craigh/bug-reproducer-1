@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('app_main') }}">Home</a> / <a href="{{ path('app_view_group', {id:group.id}) }}">{{ group.name }}</a>
+
+    <h1>Group {{ group.name }}</h1>
+
+    {{ dump(group) }}
+{% endblock %}
